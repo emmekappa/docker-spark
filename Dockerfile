@@ -14,10 +14,11 @@ RUN apt-get -y install curl nano telnet
 RUN curl -s http://d3kbcqa49mib13.cloudfront.net/spark-1.3.1-bin-hadoop2.4.tgz | tar -xz -C /usr/local/
 RUN cd /usr/local && ln -s spark-1.3.1-bin-hadoop2.4 spark
 ADD scripts/start-master.sh /start-master.sh
-ADD scripts/start-worker /start-worker.sh
+ADD scripts/start-worker.sh /start-worker.sh
 ADD scripts/spark-shell.sh  /spark-shell.sh
 ADD scripts/spark-defaults.conf /spark-defaults.conf
 ADD scripts/remove_alias.sh /remove_alias.sh
+ADD scripts/spark-env.sh /spark-env.sh
 ENV SPARK_HOME /usr/local/spark
 
 EXPOSE 8080 7077 
