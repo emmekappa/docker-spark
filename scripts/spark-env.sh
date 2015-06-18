@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #wait for ethwe 
-sleep 5
+sleep 3
 ETHWE_IP=`ifconfig ethwe 2>/dev/null | perl -nle 's/dr:(\S+)/print $1/e'`
 
 [ "$SPARK_MASTER_PORT_7077_TCP_ADDR" ] && export SPARK_MASTER_IP=$SPARK_MASTER_PORT_7077_TCP_ADDR
