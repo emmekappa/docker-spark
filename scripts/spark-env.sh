@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 #wait for ethwe 
-while [ ! "$(ifconfig | grep ^ethwe | grep \<UP,)" ]; do sleep 1; echo ethwe is down; done
+while [ ! "$(ifconfig -s | grep ethwe)" ]; do sleep 1; echo ethwe is down; done
 ETHWE_IP=`ifconfig ethwe 2>/dev/null | perl -nle 's/dr:(\S+)/print $1/e'`
 
 [ "$SPARK_MASTER_PORT_7077_TCP_ADDR" ] && export SPARK_MASTER_IP=$SPARK_MASTER_PORT_7077_TCP_ADDR
