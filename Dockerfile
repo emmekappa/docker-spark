@@ -10,7 +10,7 @@ RUN apt-get -y update
 RUN /bin/echo debconf shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
 RUN apt-get -y install oracle-java7-installer oracle-java7-set-default
 
-RUN apt-get -y install curl nano telnet
+RUN apt-get -y install curl nano telnet htop
 RUN curl -s http://d3kbcqa49mib13.cloudfront.net/spark-1.3.1-bin-hadoop2.4.tgz | tar -xz -C /usr/local/
 RUN cd /usr/local && ln -s spark-1.3.1-bin-hadoop2.4 spark
 ADD scripts/start-master.sh /start-master.sh
