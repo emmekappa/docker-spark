@@ -1,7 +1,10 @@
-Docker container for spark stand alone cluster
+Docker container for spark stand alone cluster running on Tutum
 =================================
 
-This repository contains a set of scripts and configuration files to run a [Apache Spark](https://spark.apache.org/) standalone cluster from [Docker](https://www.docker.io/) container.
+This repository contains a set of scripts and configuration files to run a [Apache Spark](https://spark.apache.org/) standalone cluster from [Docker](https://www.docker.io/) container. 
+
+It has been modified to run on docker host created on [Tutum](http://tutum.co). 
+It should also work on [wave](https://github.com/weaveworks/weave) 
 
 To run master execute:
 
