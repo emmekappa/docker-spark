@@ -18,6 +18,7 @@ ADD scripts/start-worker.sh /start-worker.sh
 ADD scripts/spark-shell.sh  /spark-shell.sh
 ADD scripts/remove_alias.sh /remove_alias.sh
 ADD scripts/spark-env.sh /spark-env.sh
+ADD scripts/spark-defaults.conf /spark-defaults.conf
 ENV SPARK_HOME /usr/local/spark
 
 EXPOSE 8080 7077
